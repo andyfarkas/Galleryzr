@@ -1,0 +1,3 @@
+users:
+  resource: users.yml
+  prefix: /users

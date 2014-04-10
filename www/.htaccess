@@ -1,0 +1,9 @@
+# Turn on the RewriteEngine
+RewriteEngine On
+
+RewriteBase /galleryzr/www
+
+#  Redirect to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php

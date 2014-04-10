@@ -1,0 +1,3 @@
+services:
+  usersService:
+    class: Sandbox\Users\Service\UsersService

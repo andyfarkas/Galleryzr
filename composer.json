@@ -1,0 +1,24 @@
+{
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "name": "afa/framework.symfony.sandbox",
+    "autoload": {
+        "psr-4": {"Galleryzr\\": "src\\"}
+    },
+
+	"repositories": [
+		{
+			"type": "vcs",
+			"url":  "https://github.com/andyfarkas/Afa.Framework.Symfony.git"
+		},
+        {
+            "type": "vcs",
+            "url":  "https://github.com/andyfarkas/Afa.Framework.git"
+        }
+	],
+	
+    "require": {
+        "afa/framework": "dev-master",
+        "afa/framework.symfony": "dev-master"
+    }
+}

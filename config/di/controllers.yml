@@ -1,0 +1,4 @@
+services:
+  usersController:
+    class: Sandbox\Users\UsersController
+    arguments: ["@usersService"]
