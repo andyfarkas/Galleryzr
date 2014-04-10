@@ -1,11 +1,14 @@
 <?php
 
-namespace Sandbox\Users\Service;
+namespace Galleryzr\Users\Service;
 
 interface IUsersService
 {
     /**
-     * @param string $name
+     * @param $email
+     * @param $password
+     * @param $nickname
+     * @return \Galleryzr\Users\Entity\IUser
      */
-    public function createUser($name);
+    public function createUser($email, $password, $nickname);
 }

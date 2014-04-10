@@ -15,17 +15,15 @@ class UsersControllerTests extends \PHPUnit_Framework_TestCase
             'email' => 'my@email.com',
         );
 
-        $userEntityFake = $this->getMock('Galleryzr\Users\Entity\IUser');
-        $userEntityFake->expects($this->any())
-                        ->method('toArray')
-                        ->will($this->returnValue($expectedUserData));
+        $userEntity = new \Galleryzr\Users\Entity\User($expectedUserData);
+        $usersServiceFake = $this->getMock('Galleryzr\Users\Service\IUsersService');
 
         $createUserModelFake = $this->getMock('Galleryzr\Users\Request\Model\ICreateUserModel');
         $createUserModelFake->expects($this->any())
                             ->method('createUser')
-                            ->will($this->returnValue($userEntityFake));
+                            ->will($this->returnValue($userEntity));
 
-        $controller = new \Galleryzr\Users\UsersController();
+        $controller = new \Galleryzr\Users\UsersController($usersServiceFake);
         $userData = $controller->createUser($createUserModelFake);
         $this->assertEquals($expectedUserData, $userData);
     }
