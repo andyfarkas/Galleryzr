@@ -14,11 +14,21 @@
         {
             "type": "vcs",
             "url":  "https://github.com/andyfarkas/Afa.Framework.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com/andyfarkas/Afa.Database.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com/andyfarkas/Afa.Database.PDO.git"
         }
 	],
 	
     "require": {
         "afa/framework": "dev-master",
-        "afa/framework.symfony": "dev-master"
+        "afa/framework.symfony": "dev-master",
+        "afa/database": "dev-master",
+        "afa/pdo": "dev-master"
     }
 }

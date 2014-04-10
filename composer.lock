@@ -3,8 +3,34 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4cafa40d99f65c880fcea6bfbe31fdd3",
+    "hash": "e996a42a6e19917c54e415dae5307ca3",
     "packages": [
+        {
+            "name": "afa/database",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andyfarkas/Afa.Database.git",
+                "reference": "81d0e4b0e5f028141f57d78bb9f08985307ba889"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andyfarkas/Afa.Database/zipball/81d0e4b0e5f028141f57d78bb9f08985307ba889",
+                "reference": "81d0e4b0e5f028141f57d78bb9f08985307ba889",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Afa\\": "src\\Afa"
+                }
+            },
+            "support": {
+                "source": "https://github.com/andyfarkas/Afa.Database/tree/master",
+                "issues": "https://github.com/andyfarkas/Afa.Database/issues"
+            },
+            "time": "2014-04-10 13:25:37"
+        },
         {
             "name": "afa/framework",
             "version": "dev-master",
@@ -65,6 +91,35 @@
                 "issues": "https://github.com/andyfarkas/Afa.Framework.Symfony/issues"
             },
             "time": "2014-04-09 13:43:51"
+        },
+        {
+            "name": "afa/pdo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andyfarkas/Afa.Database.PDO.git",
+                "reference": "e690781ea7bf1d8432f90ed39c6d456d4ba85fa6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andyfarkas/Afa.Database.PDO/zipball/e690781ea7bf1d8432f90ed39c6d456d4ba85fa6",
+                "reference": "e690781ea7bf1d8432f90ed39c6d456d4ba85fa6",
+                "shasum": ""
+            },
+            "require": {
+                "afa/database": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Afa\\": "src\\Afa"
+                }
+            },
+            "support": {
+                "source": "https://github.com/andyfarkas/Afa.Database.PDO/tree/master",
+                "issues": "https://github.com/andyfarkas/Afa.Database.PDO/issues"
+            },
+            "time": "2014-03-21 09:40:16"
         },
         {
             "name": "psr/log",
@@ -630,7 +685,9 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "afa/framework": 20,
-        "afa/framework.symfony": 20
+        "afa/framework.symfony": 20,
+        "afa/database": 20,
+        "afa/pdo": 20
     },
     "platform": [
 
