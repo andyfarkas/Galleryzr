@@ -1,4 +1,7 @@
 services:
   usersController:
-    class: Sandbox\Users\UsersController
+    class: Galleryzr\Users\UsersController
     arguments: ["@usersService"]
+  galleriesController:
+    class: Galleryzr\Galleries\GalleriesController
+    arguments: ["@galleriesService"]

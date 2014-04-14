@@ -1,0 +1,4 @@
+create:
+  path: /create
+  defaults: { _controller: galleriesController::createUser }
+  methods: [POST]

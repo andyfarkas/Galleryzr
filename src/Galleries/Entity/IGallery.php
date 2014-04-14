@@ -2,7 +2,7 @@
 
 namespace Galleryzr\Galleries\Entity;
 
-interface IGallery
+interface IGallery extends \Galleryzr\IEntity
 {
 
 }

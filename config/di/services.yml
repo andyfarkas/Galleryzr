@@ -1,3 +1,5 @@
 services:
   usersService:
-    class: Sandbox\Users\Service\UsersService
+    class: Galleryzr\Users\Service\UsersService
+  galleriesService:
+    class: Galleryzr\Galleries\Service\GalleriesService
