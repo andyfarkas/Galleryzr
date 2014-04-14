@@ -2,7 +2,7 @@
 
 namespace Galleryzr\Users\Request\Model;
 
-interface ICreateUserModel
+interface ICreateUserModel extends \Afa\Framework\Request\IModel
 {
     /**
      * @param \Galleryzr\Users\Service\IUsersService $usersService

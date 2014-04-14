@@ -21,6 +21,7 @@ class UsersControllerTests extends \PHPUnit_Framework_TestCase
         $createUserModelFake = $this->getMock('Galleryzr\Users\Request\Model\ICreateUserModel');
         $createUserModelFake->expects($this->any())
                             ->method('createUser')
+                            ->with($usersServiceFake)
                             ->will($this->returnValue($userEntity));
 
         $controller = new \Galleryzr\Users\UsersController($usersServiceFake);

@@ -18,6 +18,10 @@ class UsersController
         $this->usersService = $usersService;
     }
 
+    /**
+     * @param Request\Model\ICreateUserModel $model
+     * @return array
+     */
     public function createUser(\Galleryzr\Users\Request\Model\ICreateUserModel $model)
     {
         $createdUser = $model->createUser($this->usersService);

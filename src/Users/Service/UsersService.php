@@ -1,15 +1,40 @@
 <?php
 
-namespace Sandbox\Users\Service;
+namespace Galleryzr\Users\Service;
 
 class UsersService implements IUsersService
 {
 
     /**
-     * @param string $name
+     * @var \Afa\Database\IRepository
      */
-    public function createUser($name)
+    protected $repository;
+
+    public function __construct(\Afa\Database\IRepository $repository)
     {
-        // do some crazy logic
+        $this->repository = $repository;
+    }
+
+    /**
+     * @param $email
+     * @param $password
+     * @param $nickname
+     * @return \Galleryzr\Users\Entity\IUser
+     */
+    public function createUser($email, $password, $nickname)
+    {
+        $command = new \Afa\Database\Command\Insert('users', array(
+            'email' => $email,
+            'nickname' => $nickname,
+            'password' => $password,
+        ));
+
+        $result = $this->repository->execute($command);
+
+        return new \Galleryzr\Users\Entity\User(array(
+            'email' => $email,
+            'nickname' => $nickname,
+            'id' => reset($result->current()),
+        ));
     }
 }
