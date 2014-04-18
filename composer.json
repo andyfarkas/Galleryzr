@@ -29,6 +29,7 @@
         "afa/framework": "dev-master",
         "afa/framework.symfony": "dev-master",
         "afa/database": "dev-master",
-        "afa/pdo": "dev-master"
+        "afa/pdo": "dev-master",
+        "intervention/image": "1.*"
     }
 }

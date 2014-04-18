@@ -1,0 +1,9 @@
+upload:
+  path: /upload
+  defaults: { _controller: imagesController::uploadImages }
+  methods: [POST]
+
+show:
+  path: /{id}/show/{params}/{name}
+  defaults: { _controller: imagesController::showImage }
+  methods: [GET]

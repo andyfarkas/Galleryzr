@@ -1,0 +1,13 @@
+parameters:
+  database.dsn: "mysql:host=localhost;dbname=galleryzr"
+  database.user: "galleryzr"
+  database.password: ""
+
+services:
+  databaseConnection:
+    class: Afa\Database\PDO\Connection
+    arguments: ["%database.dsn%", "%database.user%", "%database.password%"]
+
+  genericRepository:
+    class: Afa\Database\Repository\Generic
+    arguments: ["@databaseConnection"]

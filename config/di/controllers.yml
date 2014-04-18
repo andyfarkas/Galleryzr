@@ -1,7 +1,4 @@
 services:
-  usersController:
-    class: Galleryzr\Users\UsersController
-    arguments: ["@usersService"]
-  galleriesController:
-    class: Galleryzr\Galleries\GalleriesController
-    arguments: ["@galleriesService"]
+  imagesController:
+    class: Galleryzr\Images\ImagesController
+    arguments: ["@imagesUploadService", "@imagesServingService"]

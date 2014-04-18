@@ -1,3 +1,5 @@
 imports:
+- { resource: environment.php }
+- { resource: database.yml }
 - { resource: services.yml }
 - { resource: controllers.yml }

@@ -1,5 +1,15 @@
 services:
-  usersService:
-    class: Galleryzr\Users\Service\UsersService
-  galleriesService:
-    class: Galleryzr\Galleries\Service\GalleriesService
+  imagesStorage:
+    class: Galleryzr\Images\Service\ImagesStorage
+    arguments: ["%storageDirectory.images%"]
+
+  imagesUploadService:
+    class: Galleryzr\Images\Service\ImagesUploadService
+    arguments: ["@genericRepository", "@imagesStorage"]
+
+  imagesServingService:
+    class: Galleryzr\Images\Service\ImagesServingService
+    arguments: ["@genericRepository", "@transformationParser", "@imagesStorage"]
+
+  transformationParser:
+    class: Galleryzr\Images\Transformation\TransformationParser
