@@ -1,4 +1,3 @@
 services:
   imagesController:
     class: Galleryzr\Images\ImagesController
-    arguments: ["@imagesUploadService", "@imagesServingService"]
