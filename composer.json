@@ -1,9 +1,9 @@
 {
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "name": "afa/framework.symfony.sandbox",
+    "name": "ImageServr",
     "autoload": {
-        "psr-4": {"Galleryzr\\": "src\\"}
+        "psr-4": {"ImageServr\\": "src\\"}
     },
 
 	"repositories": [

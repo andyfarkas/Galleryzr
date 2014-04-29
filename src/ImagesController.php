@@ -7,7 +7,7 @@ class ImagesController
 
     public function showImage($id, $params, $name)
     {
-        $path = dirname(dirname(__DIR__)) . '/data/' . $id;
+        $path = dirname(__DIR__) . '/data/' . $id;
 
         if (!is_file($path))
         {
@@ -29,9 +29,16 @@ class ImagesController
 
         if (strpos($params, 'w:') > 0)
         {
-            $image->textCallback('Uploaded to: awesome.dev', 2, 15, function(\Intervention\Image\Font $font)
+            $font = new \Intervention\Image\Font('Uploaded to: awesome.dev');
+            $font->file(dirname(__DIR__) . '/data/PiratesBay.ttf' );
+            $font->color('#000000');
+            $font->size(20);
+            $pointSize = $font->getPointSize();
+            $fontSize = $font->getBoxSize();
+
+            $image->textCallback('Uploaded to: awesome.dev', $image->width - $fontSize['width'], $image->height - 5, function(\Intervention\Image\Font $font)
             {
-                $font->file( dirname(dirname(__DIR__)) . '/data/PiratesBay.ttf' );
+                $font->file(dirname(__DIR__) . '/data/PiratesBay.ttf' );
                 $font->color('#000000');
                 $font->size(20);
             });
